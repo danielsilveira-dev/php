@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PHP - Introdução</title>
+
+</head>
+<body>
+	<h1>Introdução ao PHP: Primeiros passos com a linguagem</h1>
+
+	<a href="#download">Download</a> | 
+	<a href="#config">Configuração</a>
+
+	<h2>03. Linguagem interpretada</h2>
+	<p>
+		Falando um pouco sobre PHP vimos que ele é uma linguagem de programação interpretada. O que isso quer dizer?
+	</p>
+	<p>
+		Que não é necessário executar um comando para tornar o código executável a cada alteração
+	</p>
+	<p>
+		O código PHP da forma como escrevemos é interpretado por um programa (chamado de, pasmem, PHP), que executa suas instruções. Na prática, o PHP até transforma o código que escrevemos em um outro tipo de código (bytecode) legível pelo interpretador antes de começar a executar, mas isso é um assunto um pouco mais avançado. :-D
+	</p>
+	<h2 id="download">Download</h2>	
+	<a href="https://windows.php.net/downloads/releases/php-8.0.6-nts-Win32-vs16-x64.zip">PHP v8.0 (8.0.6) Zip</a>
+
+	<h2 id="config">Configuração</h2>
+	<p>
+		Após baixado o arquivo zipado do php, vamos extrair para uma pasta.
+	</p>
+	<ol>
+		<li>Ir em propriedades do Computador</li>
+		<li>Configurações avançadas do sistema</li>
+		<li>Variáveis de ambiente</li>
+		<li>Em "variáveis de usuário para ..."</li>
+		<li>Selecionar a variável "Path" e clicar em "Editar"</li>
+		<li>Clique em "Novo" e cole o endereço da pasta do executavel do php</li>
+	</ol>
+	<p>
+		Posso abrir o CMD do windows ou do php e digitar:
+		<code>php -v</code>
+	</p>
+	<img src="./1.png" alt="">
+	<p>
+		Se estiver funcionando, irá aparecer a versão que foi instalada.
+	</p>
+	<h2>php.ini</h2>
+	<p>
+		No arquivo <code>php.ini</code> dentro desta pasta, contém diversas configurações que podemos configurar como: quais extensões vêm habilitadas, se conectar com o banco de dados específico, manipular algum tipo de dado, se os erros devem exibir na mesma tela.
+	</p>
+	<p>
+		Existem dois arquivos php.ini para configurar. Um para configurar quando estiver em modo de desenvolvimento e outro quando estiver em modo de produção.
+	</p>
+	<p>
+		Oque iremos editar, podemos deixar somente o nome "php.ini".
+	</p>
+	<h2>Imprimindo uma mensagem na tela</h2>
+	<p>
+		Para imprimir uma mensagem na tela, podemos fazer da seguinte forma:
+	</p>
+	<code>echo "Olá mundo"</code>
+
+	<h2>Shell Interativo</h2>
+	<p>
+		Para abrir um shell interativo, no cmd, podemos digitar:
+	</p>
+	<code>php -a</code>
+	<p>Irá abrir uma linha de comando para digitação de linguagem php.</p>
+
+	<h2>Como iniciar e parar o terminal interativo do PHP?</h2>
+	
+</body>
+</html>
