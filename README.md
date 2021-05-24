@@ -17,16 +17,19 @@ Imprime `"Olá mundo" na tela.`
 ## Como declarar uma variável no php?
 
 ```php
+<?php>
 $idade = 21;
 ```
 ## Como retornar o tipo de uma variável?
 ```php
+<?php>
 $idade = 21;
 echo gettype($idade);
 // integer
 ```
 ### Tipos Primitivos
 ```php
+<?php>
 $soma = 2 + 2;
 $subtracao = 2 - 2;
 $multiplicacao = 2 * 2;
@@ -37,11 +40,13 @@ $restoDaDivisao = 4 % 2;
 ## Trabalhando com texto
 ### Como concatenar texto com valor de variáveis?
 ```php
+<?php>
 $idade = 36;
 echo 'Minha idade é '.$idade;
 ```
 ### Como incluir o valor das variáveis dentro de uma frase?
 ```php
+<?php>
 $nome = 'Daniel'
 $idade = 36;
 echo "Meu nome é $nome e tenho $idade anos."
@@ -56,6 +61,7 @@ No php temos diversas sequências de escape para utilizar.
 
 ## Caminhos diferentes
 ```php
+<?php>
 $idade = 17;
 echo "Você só pode entrar se tiver a partir de 18 anos." . PHP_EOL;
 if($idade >= 18) {
@@ -82,6 +88,7 @@ Talvez isso tudo fique um pouco confuso agora, mas não se preocupe. A prática 
 
 ## Senão
 ```php
+<?php>
 $idade = 7;
 echo "Você só pode entrar se tiver a partir de 18 anos." . PHP_EOL;
 if($idade >= 18) {
@@ -91,3 +98,34 @@ if($idade >= 18) {
   echo "Você só tem $idade anos. Você não pode entrar.";
 }
 ```
+
+# Avançando com o php: Arrays, Strings, Função e Web
+
+## Lista de dados
+
+### Como criar uma lista de dados?
+
+1ª Forma:
+```php
+<?php>
+$ageList = array(21, 23, 19, 25, 30, 41, 18);
+```
+Atualmente, não é mais preciso informar a palavra `array` para informar. Podemos fazer da seguinte forma:
+```php
+<?php>
+$ageList = [21, 23, 19, 25, 30, 41, 18];
+```
+### Como pegar uma informação do array de idades?
+```php
+<?php>
+$ageList = [21, 23, 19, 25, 30, 41, 18];
+$primeiraIdade = $ageList[0]; // 21
+```
+
+### Loops em listas
+```php
+<?php>
+$ageList = [21, 23, 19, 25, 30, 41, 18];
+for($i = 0; $i < 7; $i++){
+	echo ageList[$i];
+}
