@@ -129,3 +129,100 @@ $ageList = [21, 23, 19, 25, 30, 41, 18];
 for($i = 0; $i < 7; $i++){
 	echo ageList[$i];
 }
+```
+O `[$i]` depois do `$ageList`, irá corresponder aos itens da lista e o loop irá exibir cada item da lista até chegar no índice 6.
+
+Caso quiser selecionar algum item da lista, posso fazer da seguinte forma:
+```php
+<?php
+$ageList = [21, 23, 19, 25, 30, 41, 18];
+$ageList[4]
+```
+Irá exibir a idade 30
+### Como saber um tamanho de uma lista?
+**Count**  
+
+Podemos fazer da seguinte forma:
+```php
+<?php
+$ageList = [21, 23, 19, 25, 30, 41, 18];
+echo count($ageList);
+```
+Podemos fazer um loop na lista de uma forma mais dinâmica, onde o próprio loop já identifica o tamanho do array e imprime todos os items.  
+
+Por exemplo:
+```php
+<?php
+$ageList = [21, 23, 19, 25, 30, 41, 18];
+for($i = 0;$i < count($ageList);$i++){
+  echo $ageList[$i].PHP_EOL;
+}
+```
+### Várias Informações
+Vamos fazer um array de contas correntes e imprimir os titulares:  
+
+```php
+<?php
+$conta1 = [ //Dados Complexos
+  'titular' => 'Daniel',
+  'saldo' => 1800
+];
+$conta2 = [
+  'titular' => 'Suzanne',
+  'saldo' => 10000
+];
+$conta3 = [
+  'titular' => 'José',
+  'saldo' => 800
+];
+$contasCorrentes = [$conta1, $conta2, $conta3];
+for($i = 0;$i < count($contasCorrentes);$i++){
+  echo $contasCorrentes[$i]['titular'].PHP_EOL;
+}
+```
+### foreach (para cada)
+Quando não sabemos o índice da nossa lista e precisamos fazer um loop, podemos fazer da seguinte forma:
+```php
+$conta1 = [
+  'titular' => 'Daniel',
+  'saldo' => 1800
+];
+$conta2 = [
+  'titular' => 'Suzanne',
+  'saldo' => 10000
+];
+$conta3 = [
+  'titular' => 'José',
+  'saldo' => 800
+];
+$contasCorrentes = [ // Modificando os índices do array
+  12345678910 => $conta1, 
+  12325478910 => $conta2, 
+  12345377910 => $conta3
+];
+// Como posso acessar o índice(posso chamar de qualquer coisa) pelo nosso foreach? foreach ($contasCorrentes as $cpf => $conta){
+foreach ($contasCorrentes as $conta){ // Para cada uma das $contasCorrentes como $conta, exibe o nome do 'titular'
+  echo $conta['titular'].PHP_EOL;
+}
+```
+```php
+<?php
+$contasCorrentes = [ // Modificando os índices do array
+  12345678910 => [
+    'titular' => 'Daniel',
+    'saldo' => 1800
+  ], 
+  12325478910 => [
+    'titular' => 'Suzanne',
+    'saldo' => 10000
+  ], 
+  12345377910 => [
+    'titular' => 'José',
+    'saldo' => 800
+  ]
+];
+foreach ($contasCorrentes as $cpf => $conta){ // Para cada uma das $contasCorrentes como $conta, exibe o $cpf(CHAVE-INDICE)
+  echo $cpf.PHP_EOL;
+}
+```
+### Como adicionar um item?

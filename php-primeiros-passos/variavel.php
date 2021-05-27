@@ -1,2 +1,2 @@
 <?php
-$idade = 21
+$idade = 21;
